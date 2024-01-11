@@ -14,15 +14,15 @@ client.on('ready', (c) => {
     console.log(`✅${c.user.username} is Online.`);
 });
 
-// client.on('messageCreate', (message) => {
-//     if (message.author.bot) {
-//         return;
-//     }
+client.on('messageCreate', (message) => {
+    if (message.author.bot) {
+        return;
+    }
 
-//     if (message.content === 'hello') {
-//         message.reply('Hi UwU~')
-//     }
-// })
+    if (message.content === 'hello') {
+        message.reply('Hi UwU~')
+    }
+})
 
 client.on('interactionCreate', (interaction) => {
     if (!interaction.isChatInputCommand()) return;
